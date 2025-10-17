@@ -19,9 +19,12 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        // CORS configuration
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:5173") // React frontend
+                // Allow both local dev and deployed frontend
+                .allowedOrigins(
+                        "http://localhost:5173",
+                        "https://ac-ecommerce-frontend.vercel.app"
+                )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);

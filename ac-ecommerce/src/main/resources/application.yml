@@ -1,12 +1,18 @@
 
 spring:
   application:
-    name: FoodDelivery
+    name: ACDelivery
+
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/acdelivery
+#    username: postgres
+#    password: Job@259
+#    driver-class-name: org.postgresql.Driver
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/acdelivery
-    username: postgres
-    password: Job@259
+    url: jdbc:postgresql://dpg-d3op8c3ipnbc739djplg-a.singapore-postgres.render.com:5432/acdelivery
+    username: acdelivery_user
+    password: 4wSEmp12h47r0SiXta1W6UWX72cGfx6c
     driver-class-name: org.postgresql.Driver
 
   jpa:
